@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Courier New', monospace;
     font-style: italic;
+    
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: black;
 }
@@ -11,6 +12,9 @@
 body {
     background: #fefae0;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
@@ -248,10 +252,84 @@ body {
     height: auto;
 }
 
-.portpics img {
-    float: left;
-    width: 20%;
+.portpics {
     display: flex;
-    vertical-align: baseline;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    max-width: 100%;
+    margin-bottom: 10vh;
+  }
+  
+  .pic {
+    background: white;
+    padding: 1rem 1rem 2rem 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: rotate(-1deg);
+    transition: transform 0.2s ease;
+    max-width: 90vh;
+  }
+  
+  .pic:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  }
+  
+  .pic img {
+    width: 100%;
+    display: block;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .footer  {
+    background: #4b0a1e;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+  }
+
+  .footer_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin-top: auto;
+  }
+
+.footertitle {
+    color: #fefae0;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    text-decoration: none;
+    padding: 0rem 1rem;
+    height: 100%;
 }
 
+.footeritems {
+    color: #fefae0;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    text-decoration: none;
+    padding: 0rem 1rem;
+    height: 100%;
+}
+
+.footer_logo img {
+    display: flex;
+    max-width: 35vh;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+}
